@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{setspace}
+
+\setcounter{tocdepth}{5}
+
+\begin{document}
+	\pagenumbering{gobble}
+	
+	\doublespacing			
+	\tableofcontents
+	\singlespacing			%Restoring format, so ONLY Table of Contents is in Double Spacing.
+	
+	\newpage
+	\pagenumbering{arabic}
+	
+	\addtocontents{toc}{\setcounter{tocdepth}{3}}	
+	\section{Dummy}
+	Some text
+	\subsection{Subdummy}
+	Some more text
+	\begin{table}[h]
+		\caption{An empty, meaningless table.}
+	\end{table}
+	\subsubsection{Going a Bit Deeper}
+		\LaTeX allows you to display even sub-subsections on the Table of Contents.
+	\paragraph{Hey, do we even need this?}
+		It can also display paragraphs on the Table of Contents. Seriously, why do we need this again?
+	\subparagraph{Alright, this is too far. Go back, go back!}
+		Yes, it can also display subparagraphs, and I am officially done with this. Please refrain from showing me and my brother {\tt \textbackslash paragraph} on that damned Table of Contents. Just...please, don't. Try modifying the counter specifically for this section.
+
+	\section{Oh Right...}
+	I should try putting this in my previous exercise files.
+	\begin{figure}[h]
+		\caption{Dummy Figure 1}
+	\end{figure}		
+	
+
+	\newpage
+	\begin{appendix}
+		\listoffigures
+		\listoftables
+	\end{appendix}
+\end{document}
