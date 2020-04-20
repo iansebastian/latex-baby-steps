@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\title{Displaying Images With \LaTeX}
+\author{Ian Sebastian}
+
+\begin{document}
+	\maketitle
+	
+	Figure \ref{fig:H-R} shows a Hertzsprung-Russell diagram.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\linewidth]{H-R.jpg}
+		\caption{This is meant to be an example of a Hertzsprung-Russell diagram.}
+		\label{fig:H-R}
+	\end{figure}
+
+	\newpage
+	\begin{figure}[h!]
+		\centering
+		\begin{subfigure}[b]{0.4\linewidth}
+			\includegraphics[width=\linewidth]{H-R.jpg}
+			\caption{H-R Diagram One.}
+		\end{subfigure}
+		\begin{subfigure}[b]{0.4\linewidth}
+			\includegraphics[width=\linewidth]{H-R.jpg}
+			\caption{H-R Diagram Two.}
+		\end{subfigure}
+		\caption{Two identical H-R diagrams. But corporate still needs you to find the difference between them.}
+		\label{fig:H-R_2}
+	\end{figure}
+
+	\newpage
+	\begin{figure}
+		\centering
+		\begin{subfigure}[h]{0.2\linewidth}
+			\includegraphics[width=\linewidth]{H-R.jpg}
+			\caption{One H-R}
+		\end{subfigure}
+		\begin{subfigure}[h]{0.2\linewidth}
+			\includegraphics[width=\linewidth]{H-R.jpg}
+			\caption{Two H-R}
+		\end{subfigure}
+		\begin{subfigure}[h]{0.2\linewidth}
+			\includegraphics[width=\linewidth]{H-R.jpg}
+			\caption{Three H-R}
+		\end{subfigure}
+		\begin{subfigure}[h]{0.5\linewidth}
+			\includegraphics[width=\linewidth]{H-R.jpg}
+			\caption{Toby Flenderson.}
+		\end{subfigure}
+		\caption{Four H-R diagrams in two different sizes.}
+		\label{fig:H-R_4}
+	\end{figure}
+
+	\paragraph{I'm too tired to go on, so that's it for today, folks!}
+\end{document}
